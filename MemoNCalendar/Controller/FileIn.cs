@@ -35,13 +35,20 @@ namespace MemoNCalendar.Controller
                     sb_data.Append(sr.ReadToEnd());
                     Note note = null;
                     bool isActivate = false;
-                    if(status.Equals("note activate:on"))
+                    if (status.Equals("note activate:on"))
                     {
                         isActivate = true;
-                    } else if(status.Equals("note activate:off"))
+                    }
+                    else if (status.Equals("note activate:off"))
                     {
                         isActivate = false;
-                    } // 휴지통 기능 추가 예정 note mode:trash
+                    }
+                    else if (status.Equals("note activate:trash"))
+                    {
+                        sr.Close();
+                        continue;
+                        // 구현하려면 클래스들 속성 조정해야함.
+                    }
                     note = new Note(files[i], sb_data, isActivate);
                     memos.Add(note);
                     sr.Close();

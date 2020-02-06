@@ -9,3 +9,4 @@ C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.
 C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.pdb
 C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.Main.resources
 C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.View.Memo.resources
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.View.List.resources

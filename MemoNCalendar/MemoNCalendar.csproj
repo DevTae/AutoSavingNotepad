@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\FileOut.cs" />
     <Compile Include="Controller\StringConverter.cs" />
     <Compile Include="View\Calendar.cs">
       <SubType>Form</SubType>
@@ -59,6 +60,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Memo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Memo.resx">
       <DependentUpon>Memo.cs</DependentUpon>

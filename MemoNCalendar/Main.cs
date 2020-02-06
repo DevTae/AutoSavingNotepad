@@ -12,8 +12,9 @@ namespace MemoNCalendar
     {
         public static string version = "1.00";
         public static int windowCount = 0;
+        public static bool isListView = false;
         public static List<Memo> memos;
-        List<Note> notes;
+        public static List<Note> notes;
 
         public Main()
         {
@@ -27,10 +28,25 @@ namespace MemoNCalendar
             memos = new List<Memo>();
             foreach (Note note in notes)
             {
+                if (note.getIsActivate())
+                {
+                    Memo memo = new Memo(note);
+                    memos.Add(memo);
+                    memo.Show();
+                }
+            }
+            if(windowCount == 0)
+            {
+                // new Memo 생성
+                Note note = null;
+                while (true)
+                {
+                    note = FileOut.makeNewMemoFile();
+                    if (note != null) break;
+                }
                 Memo memo = new Memo(note);
                 memos.Add(memo);
                 memo.Show();
-                windowCount++;
             }
             this.Hide();
         }
