@@ -1,0 +1,11 @@
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\bin\Debug\MemoNCalendar.exe.config
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\bin\Debug\MemoNCalendar.exe
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\bin\Debug\MemoNCalendar.pdb
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.csprojAssemblyReference.cache
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.Properties.Resources.resources
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.csproj.GenerateResource.cache
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.csproj.CoreCompileInputs.cache
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.exe
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.pdb
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.Main.resources
+C:\Users\fmkms\source\repos\MemoNCalendar\MemoNCalendar\obj\Debug\MemoNCalendar.View.Memo.resources
