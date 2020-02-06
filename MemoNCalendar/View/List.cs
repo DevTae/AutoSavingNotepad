@@ -61,5 +61,10 @@ namespace MemoNCalendar.View
         {
             Activate_Memo();
         }
+
+        private void List_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Main.isListView = false;
+        }
     }
 }

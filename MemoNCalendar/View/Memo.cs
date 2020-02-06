@@ -1,6 +1,7 @@
 ﻿using MemoNCalendar.Controller;
 using MemoNCalendar.Model;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -28,7 +29,53 @@ namespace MemoNCalendar.View
         private void Memo_Load(object sender, EventArgs e)
         {
             textBox.Text = note.getMemo().ToString();
-            nowTime.Text = "생성 날짜 : " + note.getFileName();
+
+            titleLabel.Parent = pictureBox1;
+            menuLabel.Parent = pictureBox1;
+            pinStatusLabel.Parent = pictureBox1;
+            opacityStatusLabel.Parent = pictureBox1;
+
+            this.Width = 342;
+            this.Height = 406;
+
+            int i = 0;
+            int pivotLeft = 228;
+            int pivotTop = 24;
+
+            newNote1.Left = pivotLeft;
+            newNote1.Top = pivotTop + 34 * i;
+            newNote2.Left = pivotLeft;
+            newNote2.Top = pivotTop + 34 * i++;
+
+            saveNote1.Left = pivotLeft;
+            saveNote1.Top = pivotTop + 34 * i;
+            saveNote2.Left = pivotLeft;
+            saveNote2.Top = pivotTop + 34 * i++;
+
+            removeNote1.Left = pivotLeft;
+            removeNote1.Top = pivotTop + 34 * i;
+            removeNote2.Left = pivotLeft;
+            removeNote2.Top = pivotTop + 34 * i++;
+
+            listView1.Left = pivotLeft;
+            listView1.Top = pivotTop + 34 * i;
+            listView2.Left = pivotLeft;
+            listView2.Top = pivotTop + 34 * i++;
+
+            pinForm1.Left = pivotLeft;
+            pinForm1.Top = pivotTop + 34 * i;
+            pinForm2.Left = pivotLeft;
+            pinForm2.Top = pivotTop + 34 * i++;
+
+            opacitySet1.Left = pivotLeft;
+            opacitySet1.Top = pivotTop + 34 * i;
+            opacitySet2.Left = pivotLeft;
+            opacitySet2.Top = pivotTop + 34 * i++;
+
+            programExit1.Left = pivotLeft;
+            programExit1.Top = pivotTop + 34 * i;
+            programExit2.Left = pivotLeft;
+            programExit2.Top = pivotTop + 34 * i++;
         }
 
         /* 구현하고 보니 필요 없는 기능
@@ -140,12 +187,35 @@ namespace MemoNCalendar.View
         {
             if(this.TopMost == true)
             {
-                pinStatus.Text = "고정풀림";
+                pinStatusLabel.Text = "최상단 고정 : OFF";
+                pinStatusLabel.ForeColor = Color.White;
                 this.TopMost = false;
             } else
             {
-                pinStatus.Text = "고정됨";
+                pinStatusLabel.Text = "최상단 고정 : ON";
+                pinStatusLabel.ForeColor = Color.Lime;
                 this.TopMost = true;
+            }
+        }
+
+        private void Opacity_Set_Customed()
+        {
+            if(this.Opacity >= 1)
+            {
+                this.Opacity = 0.8;
+                opacityStatusLabel.Text = "현재 투명도 : 80%";
+            } else if(this.Opacity >= 0.8)
+            {
+                this.Opacity = 0.6;
+                opacityStatusLabel.Text = "현재 투명도 : 60%";
+            } else if (this.Opacity >= 0.6)
+            {
+                this.Opacity = 0.4;
+                opacityStatusLabel.Text = "현재 투명도 : 40%";
+            } else if (this.Opacity >= 0.4)
+            {
+                this.Opacity = 1;
+                opacityStatusLabel.Text = "현재 투명도 : 100%";
             }
         }
 
@@ -162,34 +232,201 @@ namespace MemoNCalendar.View
             sw.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void menuLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            newNote1.Visible = true;
+            listView1.Visible = true;
+            saveNote1.Visible = true;
+            pinForm1.Visible = true;
+            removeNote1.Visible = true;
+            opacitySet1.Visible = true;
+            programExit1.Visible = true;
+        }
+
+        private void Menu_Off()
+        {
+            newNote1.Visible = false;
+            listView1.Visible = false;
+            saveNote1.Visible = false;
+            pinForm1.Visible = false;
+            removeNote1.Visible = false;
+            opacitySet1.Visible = false;
+            programExit1.Visible = false;
+
+            newNote2.Visible = false;
+            listView2.Visible = false;
+            saveNote2.Visible = false;
+            pinForm2.Visible = false;
+            removeNote2.Visible = false;
+            opacitySet2.Visible = false;
+            programExit2.Visible = false;
+        }
+
+        private void Memo_MouseMove(object sender, MouseEventArgs e)
+        {
+            Menu_Off();
+        }
+
+        private void newNote2_Click(object sender, EventArgs e)
         {
             New_Memo();
         }
 
-        private void pinStatus_Click(object sender, EventArgs e)
+        private void listView2_Click(object sender, EventArgs e)
         {
-            Pin_OrNot();
+            ShowListForm();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Terminate();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Go_Trashcan();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void saveNote2_Click(object sender, EventArgs e)
         {
             Save_and_Quit();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void pinForm2_Click(object sender, EventArgs e)
         {
-            ShowListForm();
+            Pin_OrNot();
+        }
+
+        private void removeNote2_Click(object sender, EventArgs e)
+        {
+            Go_Trashcan();
+        }
+
+        private void opacitySet2_Click(object sender, EventArgs e)
+        {
+            Opacity_Set_Customed();
+        }
+
+        private void programExit2_Click(object sender, EventArgs e)
+        {
+            Terminate();
+        }
+
+        private void newNote1_MouseMove(object sender, MouseEventArgs e)
+        {
+            newNote1.Visible = false;
+            newNote2.Visible = true;
+        }
+
+        private void listView1_MouseMove(object sender, MouseEventArgs e)
+        {
+            listView1.Visible = false;
+            listView2.Visible = true;
+        }
+
+        private void saveNote1_MouseMove(object sender, MouseEventArgs e)
+        {
+            saveNote1.Visible = false;
+            saveNote2.Visible = true;
+        }
+
+        private void pinForm1_MouseMove(object sender, MouseEventArgs e)
+        {
+            pinForm1.Visible = false;
+            pinForm2.Visible = true;
+        }
+
+        private void removeNote1_MouseMove(object sender, MouseEventArgs e)
+        {
+            removeNote1.Visible = false;
+            removeNote2.Visible = true;
+        }
+
+        private void opacitySet1_MouseMove(object sender, MouseEventArgs e)
+        {
+            opacitySet1.Visible = false;
+            opacitySet2.Visible = true;
+        }
+
+        private void programExit1_MouseMove(object sender, MouseEventArgs e)
+        {
+            programExit1.Visible = false;
+            programExit2.Visible = true;
+        }
+
+        private void newNote2_MouseLeave(object sender, EventArgs e)
+        {
+            newNote1.Visible = true;
+            newNote2.Visible = false;
+        }
+
+        private void listView2_MouseLeave(object sender, EventArgs e)
+        {
+            listView1.Visible = true;
+            listView2.Visible = false;
+        }
+
+        private void saveNote2_MouseLeave(object sender, EventArgs e)
+        {
+            saveNote1.Visible = true;
+            saveNote2.Visible = false;
+        }
+
+        private void pinForm2_MouseLeave(object sender, EventArgs e)
+        {
+            pinForm1.Visible = true;
+            pinForm2.Visible = false;
+        }
+
+        private void removeNote2_MouseLeave(object sender, EventArgs e)
+        {
+            removeNote1.Visible = true;
+            removeNote2.Visible = false;
+        }
+
+        private void opacitySet2_MouseLeave(object sender, EventArgs e)
+        {
+            opacitySet1.Visible = true;
+            opacitySet2.Visible = false;
+        }
+
+        private void programExit2_MouseLeave(object sender, EventArgs e)
+        {
+            programExit1.Visible = true;
+            programExit2.Visible = false;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Menu_Off();
+        }
+
+        private void textBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            Menu_Off();
+        }
+
+        private void opacityStatusLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            Menu_Off();
+        }
+
+        private void pinStatusLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            Menu_Off();
+        }
+
+        bool isMove = false;
+        Point mousePoint;
+
+        private void titleLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            Menu_Off();
+            if(isMove && (e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                this.Location = new Point(this.Left - (mousePoint.X - e.X), this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void titleLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            isMove = true;
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void titleLabel_MouseUp(object sender, MouseEventArgs e)
+        {
+            isMove = false;
         }
     }
 }

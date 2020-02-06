@@ -28,129 +28,379 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memo));
             this.textBox = new System.Windows.Forms.TextBox();
+            this.menuLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.pinStatusLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.nowTime = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pinStatus = new System.Windows.Forms.Button();
+            this.newNote2 = new System.Windows.Forms.PictureBox();
+            this.newNote1 = new System.Windows.Forms.PictureBox();
+            this.opacitySet2 = new System.Windows.Forms.PictureBox();
+            this.programExit2 = new System.Windows.Forms.PictureBox();
+            this.removeNote2 = new System.Windows.Forms.PictureBox();
+            this.pinForm2 = new System.Windows.Forms.PictureBox();
+            this.saveNote2 = new System.Windows.Forms.PictureBox();
+            this.listView2 = new System.Windows.Forms.PictureBox();
+            this.opacitySet1 = new System.Windows.Forms.PictureBox();
+            this.programExit1 = new System.Windows.Forms.PictureBox();
+            this.removeNote1 = new System.Windows.Forms.PictureBox();
+            this.pinForm1 = new System.Windows.Forms.PictureBox();
+            this.saveNote1 = new System.Windows.Forms.PictureBox();
+            this.listView1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.opacityStatusLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.newNote2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newNote1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opacitySet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programExit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.removeNote2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pinForm2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveNote2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opacitySet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programExit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.removeNote1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pinForm1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveNote1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(12, 90);
+            this.textBox.BackColor = System.Drawing.Color.White;
+            this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox.Location = new System.Drawing.Point(12, 30);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(589, 270);
-            this.textBox.TabIndex = 0;
+            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox.Size = new System.Drawing.Size(320, 330);
+            this.textBox.TabIndex = 1;
             this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.textBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseMove);
+            // 
+            // menuLabel
+            // 
+            this.menuLabel.BackColor = System.Drawing.Color.Transparent;
+            this.menuLabel.Location = new System.Drawing.Point(318, 2);
+            this.menuLabel.Name = "menuLabel";
+            this.menuLabel.Size = new System.Drawing.Size(21, 22);
+            this.menuLabel.TabIndex = 12;
+            this.menuLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuLabel_MouseMove);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Location = new System.Drawing.Point(0, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(314, 24);
+            this.titleLabel.TabIndex = 13;
+            this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseDown);
+            this.titleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseMove);
+            this.titleLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.titleLabel_MouseUp);
+            // 
+            // pinStatusLabel
+            // 
+            this.pinStatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pinStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pinStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.pinStatusLabel.Location = new System.Drawing.Point(188, 364);
+            this.pinStatusLabel.Name = "pinStatusLabel";
+            this.pinStatusLabel.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.pinStatusLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.pinStatusLabel.Size = new System.Drawing.Size(145, 21);
+            this.pinStatusLabel.TabIndex = 43;
+            this.pinStatusLabel.Text = "최상단 고정 : OFF";
+            this.pinStatusLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pinStatusLabel_MouseMove);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(160, 7);
+            this.button1.Location = new System.Drawing.Point(12, 422);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // newNote2
             // 
-            this.button3.Location = new System.Drawing.Point(418, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 34);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "삭제";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.newNote2.Image = global::MemoNCalendar.Properties.Resources.newNote2;
+            this.newNote2.Location = new System.Drawing.Point(562, 49);
+            this.newNote2.Name = "newNote2";
+            this.newNote2.Size = new System.Drawing.Size(114, 34);
+            this.newNote2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.newNote2.TabIndex = 23;
+            this.newNote2.TabStop = false;
+            this.newNote2.Visible = false;
+            this.newNote2.Click += new System.EventHandler(this.newNote2_Click);
+            this.newNote2.MouseLeave += new System.EventHandler(this.newNote2_MouseLeave);
             // 
-            // button4
+            // newNote1
             // 
-            this.button4.Location = new System.Drawing.Point(488, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 34);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "종료";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.newNote1.Image = global::MemoNCalendar.Properties.Resources.newNote1;
+            this.newNote1.Location = new System.Drawing.Point(562, 9);
+            this.newNote1.Name = "newNote1";
+            this.newNote1.Size = new System.Drawing.Size(114, 34);
+            this.newNote1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.newNote1.TabIndex = 22;
+            this.newNote1.TabStop = false;
+            this.newNote1.Visible = false;
+            this.newNote1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.newNote1_MouseMove);
             // 
-            // nowTime
+            // opacitySet2
             // 
-            this.nowTime.Location = new System.Drawing.Point(12, 50);
-            this.nowTime.Name = "nowTime";
-            this.nowTime.Size = new System.Drawing.Size(589, 34);
-            this.nowTime.TabIndex = 2;
-            this.nowTime.Text = "생성 날짜 : ";
-            this.nowTime.UseVisualStyleBackColor = true;
+            this.opacitySet2.Image = global::MemoNCalendar.Properties.Resources.opacitySet2;
+            this.opacitySet2.Location = new System.Drawing.Point(562, 512);
+            this.opacitySet2.Name = "opacitySet2";
+            this.opacitySet2.Size = new System.Drawing.Size(114, 34);
+            this.opacitySet2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.opacitySet2.TabIndex = 35;
+            this.opacitySet2.TabStop = false;
+            this.opacitySet2.Visible = false;
+            this.opacitySet2.Click += new System.EventHandler(this.opacitySet2_Click);
+            this.opacitySet2.MouseLeave += new System.EventHandler(this.opacitySet2_MouseLeave);
             // 
-            // button5
+            // programExit2
             // 
-            this.button5.Location = new System.Drawing.Point(310, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 34);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "리스트넣기";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.programExit2.Image = global::MemoNCalendar.Properties.Resources.programExit2;
+            this.programExit2.Location = new System.Drawing.Point(562, 613);
+            this.programExit2.Name = "programExit2";
+            this.programExit2.Size = new System.Drawing.Size(114, 34);
+            this.programExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.programExit2.TabIndex = 33;
+            this.programExit2.TabStop = false;
+            this.programExit2.Visible = false;
+            this.programExit2.Click += new System.EventHandler(this.programExit2_Click);
+            this.programExit2.MouseLeave += new System.EventHandler(this.programExit2_MouseLeave);
             // 
-            // button6
+            // removeNote2
             // 
-            this.button6.Location = new System.Drawing.Point(204, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 34);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "저장리스트";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.removeNote2.Image = global::MemoNCalendar.Properties.Resources.removeNote2;
+            this.removeNote2.Location = new System.Drawing.Point(562, 411);
+            this.removeNote2.Name = "removeNote2";
+            this.removeNote2.Size = new System.Drawing.Size(114, 34);
+            this.removeNote2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.removeNote2.TabIndex = 31;
+            this.removeNote2.TabStop = false;
+            this.removeNote2.Visible = false;
+            this.removeNote2.Click += new System.EventHandler(this.removeNote2_Click);
+            this.removeNote2.MouseLeave += new System.EventHandler(this.removeNote2_MouseLeave);
             // 
-            // pinStatus
+            // pinForm2
             // 
-            this.pinStatus.Location = new System.Drawing.Point(12, 7);
-            this.pinStatus.Name = "pinStatus";
-            this.pinStatus.Size = new System.Drawing.Size(75, 34);
-            this.pinStatus.TabIndex = 7;
-            this.pinStatus.Text = "고정풀림";
-            this.pinStatus.UseVisualStyleBackColor = true;
-            this.pinStatus.Click += new System.EventHandler(this.pinStatus_Click);
+            this.pinForm2.Image = global::MemoNCalendar.Properties.Resources.pinForm2;
+            this.pinForm2.Location = new System.Drawing.Point(562, 319);
+            this.pinForm2.Name = "pinForm2";
+            this.pinForm2.Size = new System.Drawing.Size(114, 34);
+            this.pinForm2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pinForm2.TabIndex = 29;
+            this.pinForm2.TabStop = false;
+            this.pinForm2.Visible = false;
+            this.pinForm2.Click += new System.EventHandler(this.pinForm2_Click);
+            this.pinForm2.MouseLeave += new System.EventHandler(this.pinForm2_MouseLeave);
+            // 
+            // saveNote2
+            // 
+            this.saveNote2.Image = global::MemoNCalendar.Properties.Resources.saveNote2;
+            this.saveNote2.Location = new System.Drawing.Point(562, 214);
+            this.saveNote2.Name = "saveNote2";
+            this.saveNote2.Size = new System.Drawing.Size(114, 34);
+            this.saveNote2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.saveNote2.TabIndex = 27;
+            this.saveNote2.TabStop = false;
+            this.saveNote2.Visible = false;
+            this.saveNote2.Click += new System.EventHandler(this.saveNote2_Click);
+            this.saveNote2.MouseLeave += new System.EventHandler(this.saveNote2_MouseLeave);
+            // 
+            // listView2
+            // 
+            this.listView2.Image = global::MemoNCalendar.Properties.Resources.listView2;
+            this.listView2.Location = new System.Drawing.Point(562, 128);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(114, 34);
+            this.listView2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.listView2.TabIndex = 25;
+            this.listView2.TabStop = false;
+            this.listView2.Visible = false;
+            this.listView2.Click += new System.EventHandler(this.listView2_Click);
+            this.listView2.MouseLeave += new System.EventHandler(this.listView2_MouseLeave);
+            // 
+            // opacitySet1
+            // 
+            this.opacitySet1.Image = global::MemoNCalendar.Properties.Resources.opacitySet1;
+            this.opacitySet1.Location = new System.Drawing.Point(562, 472);
+            this.opacitySet1.Name = "opacitySet1";
+            this.opacitySet1.Size = new System.Drawing.Size(114, 34);
+            this.opacitySet1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.opacitySet1.TabIndex = 34;
+            this.opacitySet1.TabStop = false;
+            this.opacitySet1.Visible = false;
+            this.opacitySet1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.opacitySet1_MouseMove);
+            // 
+            // programExit1
+            // 
+            this.programExit1.Image = global::MemoNCalendar.Properties.Resources.programExit1;
+            this.programExit1.Location = new System.Drawing.Point(562, 574);
+            this.programExit1.Name = "programExit1";
+            this.programExit1.Size = new System.Drawing.Size(114, 34);
+            this.programExit1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.programExit1.TabIndex = 32;
+            this.programExit1.TabStop = false;
+            this.programExit1.Visible = false;
+            this.programExit1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.programExit1_MouseMove);
+            // 
+            // removeNote1
+            // 
+            this.removeNote1.Image = global::MemoNCalendar.Properties.Resources.removeNote1;
+            this.removeNote1.Location = new System.Drawing.Point(562, 372);
+            this.removeNote1.Name = "removeNote1";
+            this.removeNote1.Size = new System.Drawing.Size(114, 34);
+            this.removeNote1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.removeNote1.TabIndex = 30;
+            this.removeNote1.TabStop = false;
+            this.removeNote1.Visible = false;
+            this.removeNote1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.removeNote1_MouseMove);
+            // 
+            // pinForm1
+            // 
+            this.pinForm1.Image = global::MemoNCalendar.Properties.Resources.pinForm1;
+            this.pinForm1.Location = new System.Drawing.Point(562, 280);
+            this.pinForm1.Name = "pinForm1";
+            this.pinForm1.Size = new System.Drawing.Size(114, 34);
+            this.pinForm1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pinForm1.TabIndex = 28;
+            this.pinForm1.TabStop = false;
+            this.pinForm1.Visible = false;
+            this.pinForm1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pinForm1_MouseMove);
+            // 
+            // saveNote1
+            // 
+            this.saveNote1.Image = global::MemoNCalendar.Properties.Resources.saveNote1;
+            this.saveNote1.Location = new System.Drawing.Point(562, 175);
+            this.saveNote1.Name = "saveNote1";
+            this.saveNote1.Size = new System.Drawing.Size(114, 34);
+            this.saveNote1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.saveNote1.TabIndex = 26;
+            this.saveNote1.TabStop = false;
+            this.saveNote1.Visible = false;
+            this.saveNote1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.saveNote1_MouseMove);
+            // 
+            // listView1
+            // 
+            this.listView1.Image = global::MemoNCalendar.Properties.Resources.listView1;
+            this.listView1.Location = new System.Drawing.Point(562, 89);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(114, 34);
+            this.listView1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.listView1.TabIndex = 24;
+            this.listView1.TabStop = false;
+            this.listView1.Visible = false;
+            this.listView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(342, 406);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // opacityStatusLabel
+            // 
+            this.opacityStatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.opacityStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.opacityStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.opacityStatusLabel.Location = new System.Drawing.Point(12, 364);
+            this.opacityStatusLabel.Name = "opacityStatusLabel";
+            this.opacityStatusLabel.Size = new System.Drawing.Size(145, 21);
+            this.opacityStatusLabel.TabIndex = 44;
+            this.opacityStatusLabel.Text = "현재 투명도 : 100%";
+            this.opacityStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opacityStatusLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.opacityStatusLabel_MouseMove);
             // 
             // Memo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 372);
+            this.ClientSize = new System.Drawing.Size(935, 666);
             this.ControlBox = false;
-            this.Controls.Add(this.pinStatus);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.nowTime);
+            this.Controls.Add(this.opacityStatusLabel);
+            this.Controls.Add(this.newNote2);
+            this.Controls.Add(this.newNote1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuLabel);
+            this.Controls.Add(this.pinStatusLabel);
+            this.Controls.Add(this.opacitySet2);
+            this.Controls.Add(this.programExit2);
+            this.Controls.Add(this.removeNote2);
+            this.Controls.Add(this.pinForm2);
+            this.Controls.Add(this.saveNote2);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.opacitySet1);
+            this.Controls.Add(this.programExit1);
+            this.Controls.Add(this.removeNote1);
+            this.Controls.Add(this.pinForm1);
+            this.Controls.Add(this.saveNote1);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.textBox);
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Memo";
             this.Text = "Memo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Memo_FormClosing);
             this.Load += new System.EventHandler(this.Memo_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Memo_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.newNote2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newNote1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opacitySet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programExit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.removeNote2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pinForm2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveNote2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opacitySet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programExit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.removeNote1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pinForm1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveNote1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Label menuLabel;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.PictureBox newNote1;
+        private System.Windows.Forms.Label pinStatusLabel;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button nowTime;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button pinStatus;
+        private System.Windows.Forms.PictureBox newNote2;
+        private System.Windows.Forms.PictureBox programExit2;
+        private System.Windows.Forms.PictureBox programExit1;
+        private System.Windows.Forms.PictureBox opacitySet2;
+        private System.Windows.Forms.PictureBox opacitySet1;
+        private System.Windows.Forms.PictureBox removeNote2;
+        private System.Windows.Forms.PictureBox removeNote1;
+        private System.Windows.Forms.PictureBox pinForm2;
+        private System.Windows.Forms.PictureBox pinForm1;
+        private System.Windows.Forms.PictureBox saveNote2;
+        private System.Windows.Forms.PictureBox saveNote1;
+        private System.Windows.Forms.PictureBox listView2;
+        private System.Windows.Forms.PictureBox listView1;
+        private System.Windows.Forms.Label opacityStatusLabel;
     }
 }
 

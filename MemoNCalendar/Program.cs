@@ -14,6 +14,11 @@ namespace MemoNCalendar
         [STAThread]
         static void Main()
         {
+            if(System.Diagnostics.Process.GetProcessesByName("MemoNCalendar").Length > 1)
+            {
+                MessageBox.Show(null, "이미 M&C를 실행 중 입니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());

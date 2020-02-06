@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.idText = new System.Windows.Forms.TextBox();
             this.pwText = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // idText
             // 
             this.idText.ForeColor = System.Drawing.Color.Gray;
-            this.idText.Location = new System.Drawing.Point(86, 64);
+            this.idText.Location = new System.Drawing.Point(98, 415);
             this.idText.Name = "idText";
             this.idText.Size = new System.Drawing.Size(178, 25);
             this.idText.TabIndex = 1;
@@ -49,7 +51,7 @@
             // pwText
             // 
             this.pwText.ForeColor = System.Drawing.Color.Gray;
-            this.pwText.Location = new System.Drawing.Point(86, 107);
+            this.pwText.Location = new System.Drawing.Point(98, 458);
             this.pwText.Name = "pwText";
             this.pwText.PasswordChar = '●';
             this.pwText.Size = new System.Drawing.Size(178, 25);
@@ -61,7 +63,7 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Location = new System.Drawing.Point(292, 64);
+            this.button1.Location = new System.Drawing.Point(304, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 25);
             this.button1.TabIndex = 0;
@@ -71,7 +73,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(292, 107);
+            this.button2.Location = new System.Drawing.Point(304, 458);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 25);
             this.button2.TabIndex = 3;
@@ -79,29 +81,34 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // pictureBox1
             // 
-            this.button3.Location = new System.Drawing.Point(154, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 33);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "test";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(600, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 194);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pwText);
             this.Controls.Add(this.idText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
-            this.Text = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "N&C";
             this.Load += new System.EventHandler(this.Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,6 +120,6 @@
         private System.Windows.Forms.TextBox pwText;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

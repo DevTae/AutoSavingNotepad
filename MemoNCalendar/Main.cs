@@ -23,7 +23,7 @@ namespace MemoNCalendar
 
         private void loginFunction(string idText, string pwText)
         {
-            MessageBox.Show(null, "성공", "성공!");
+            //MessageBox.Show(null, "성공", "성공!");
 
             memos = new List<Memo>();
             foreach (Note note in notes)
@@ -101,9 +101,9 @@ namespace MemoNCalendar
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            loginFunction("", "");
         }
     }
 }
