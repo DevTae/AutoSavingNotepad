@@ -44,6 +44,7 @@ namespace MemoNCalendar
                     note = FileOut.makeNewMemoFile();
                     if (note != null) break;
                 }
+                notes.Add(note);
                 Memo memo = new Memo(note);
                 memos.Add(memo);
                 memo.Show();

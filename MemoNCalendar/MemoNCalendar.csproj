@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>MemoNCalendar</RootNamespace>
     <AssemblyName>MemoNCalendar</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -139,6 +140,7 @@
     <None Include="Image\buttons\listView1.png" />
     <None Include="Image\buttons\newNote2.png" />
     <None Include="Image\buttons\newNote1.png" />
+    <None Include="Image\m&amp;c.png" />
     <Content Include="Image\memo.png" />
     <None Include="Image\pressed button.png" />
     <None Include="Image\unpressed button.png" />

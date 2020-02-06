@@ -83,6 +83,16 @@ namespace MemoNCalendar.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap mc {
+            get {
+                object obj = ResourceManager.GetObject("mc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap memo3 {
             get {
                 object obj = ResourceManager.GetObject("memo3", resourceCulture);
@@ -153,16 +163,6 @@ namespace MemoNCalendar.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap pressedbutton {
-            get {
-                object obj = ResourceManager.GetObject("pressedbutton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
         internal static System.Drawing.Bitmap programExit1 {
             get {
                 object obj = ResourceManager.GetObject("programExit1", resourceCulture);
@@ -226,16 +226,6 @@ namespace MemoNCalendar.Properties {
         internal static System.Drawing.Bitmap saveNote2 {
             get {
                 object obj = ResourceManager.GetObject("saveNote2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap unpressedbutton {
-            get {
-                object obj = ResourceManager.GetObject("unpressedbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
