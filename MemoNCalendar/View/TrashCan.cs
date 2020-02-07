@@ -62,10 +62,10 @@ namespace MemoNCalendar.View
                 {
                     Main.notes.Remove(note);
                     if(FileOut.removeMemoFile(note.getFileName())) {
-                        MessageBox.Show(null, "선택한 메모 파일을 삭제했습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(new Form() { TopMost = true }, "선택한 메모 파일을 삭제했습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     } else
                     {
-                        MessageBox.Show(null, "삭제 과정에서 오류가 발생했습니다.", "예외 처리", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(new Form() { TopMost = true }, "삭제 과정에서 오류가 발생했습니다.", "예외 처리", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     listBox.Items.Remove(listBox.SelectedItem);
                     Main.isTrashCan = false;
@@ -96,10 +96,10 @@ namespace MemoNCalendar.View
                     }
                 }
                 trashes.Clear();
-                MessageBox.Show(null, "휴지통을 비웠습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(new Form() { TopMost = true }, "휴지통을 비웠습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } catch(FileLoadException e)
             {
-                MessageBox.Show(null, "휴지통을 비우는 과정에서 오류가 발생했습니다.", "예외 처리", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(new Form() { TopMost = true }, "휴지통을 비우는 과정에서 오류가 발생했습니다.", "예외 처리", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Main.isTrashCan = false;
             this.Close();

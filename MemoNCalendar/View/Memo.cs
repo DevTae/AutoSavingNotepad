@@ -98,7 +98,7 @@ namespace MemoNCalendar.View
                 Terminate();
             }
 
-            DialogResult result = MessageBox.Show(null, "모든 메모 탭을 삭제하시겠습니까?", "Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(new Form() { TopMost = true }, "모든 메모 탭을 삭제하시겠습니까?", "Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Terminate();
@@ -115,7 +115,7 @@ namespace MemoNCalendar.View
         {
             if (Main.windowCount == 1) // handling Exception
             {
-                DialogResult result = MessageBox.Show(null, "새 노트를 하나 더 생성하시겠습니까?\n취소 시 종료됩니다.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show(new Form() { TopMost = true }, "새 노트를 하나 더 생성하시겠습니까?\n취소 시 종료됩니다.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     New_Memo();
@@ -158,7 +158,7 @@ namespace MemoNCalendar.View
 
         private void Go_Trashcan()
         {
-            //DialogResult result = MessageBox.Show(null, "정말로 이 노트를 삭제하시겠습니까?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //DialogResult result = MessageBox.Show(new Form() { TopMost = true }, "정말로 이 노트를 삭제하시겠습니까?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //if (result == DialogResult.Yes)
             //{
             this.note.setFileStatus(Note.trash);
@@ -181,7 +181,7 @@ namespace MemoNCalendar.View
             }
             else
             {
-                MessageBox.Show(null, "이미 리스트뷰가 켜져 있습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(new Form() { TopMost = true }, "이미 리스트뷰가 켜져 있습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -194,7 +194,7 @@ namespace MemoNCalendar.View
             }
             else
             {
-                MessageBox.Show(null, "이미 휴지통이 켜져 있습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(new Form() { TopMost = true }, "이미 휴지통이 켜져 있습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
