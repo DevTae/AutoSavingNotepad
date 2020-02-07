@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="listView1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -130,6 +130,9 @@
   <data name="opacitySet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\opacitySet1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ahdelronBlog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\buttons\ahdelronBlog1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="listView2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\listView2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,14 +142,14 @@
   <data name="saveNote2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\saveNote2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="programExit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\buttons\programExit2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="removeNote1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\removeNote1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="opacitySet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\opacitySet2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="memo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\memo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\p&amp;s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,19 +157,29 @@
   <data name="newNote1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\newNote1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="memo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\memo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trashCan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\buttons\trashCan1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="programExit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\buttons\programExit2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pinForm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\pinForm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\m&amp;c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="programExit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\programExit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ahdelronBlog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\buttons\ahdelronBlog2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pinForm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\buttons\pinForm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\m&amp;c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="trashCan2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\buttons\trashCan2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

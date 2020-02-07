@@ -17,7 +17,7 @@ namespace MemoNCalendar.View
         {
             foreach (Note note in Main.notes)
             {
-                if (!note.getIsActivate())
+                if (note.getFileStatus() == Note.off)
                 {
                     listBox.Items.Add(note.getFileName());
                 }
@@ -30,7 +30,7 @@ namespace MemoNCalendar.View
             {
                 if(listBox.Text == note.getFileName())
                 {
-                    note.setIsActivate(true);
+                    note.setFileStatus(Note.on);
                     Memo memo = new Memo(note);
                     Main.memos.Add(memo);
                     memo.Show();
@@ -40,6 +40,18 @@ namespace MemoNCalendar.View
                     Main.isListView = false;
                     this.Close();
                     break;
+                }
+            }
+        }
+
+        private void Refresh_Listbox()
+        {
+            listBox.Items.Clear();
+            foreach (Note note in Main.notes)
+            {
+                if (note.getFileStatus() == Note.off)
+                {
+                    listBox.Items.Add(note.getFileName());
                 }
             }
         }
@@ -65,6 +77,11 @@ namespace MemoNCalendar.View
         private void List_FormClosing(object sender, FormClosingEventArgs e)
         {
             Main.isListView = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Refresh_Listbox();
         }
     }
 }

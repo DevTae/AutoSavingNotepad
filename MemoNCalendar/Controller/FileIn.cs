@@ -30,26 +30,37 @@ namespace MemoNCalendar.Controller
                 {
                     StreamReader sr = new StreamReader(@"data\" + files[i]);
                     StringBuilder sb_data = new StringBuilder();
-                    string status = sr.ReadLine();
-                    Console.WriteLine("{0}", status);
-                    sb_data.Append(sr.ReadToEnd());
+                    string status = null;
+                    if (sr.Peek() > 0)
+                        status = sr.ReadLine();
+                    Console.WriteLine("{0}", status); // debugging mode
+                    if(sr.Peek() > 0)
+                        sb_data.Append(sr.ReadToEnd());
                     Note note = null;
-                    bool isActivate = false;
-                    if (status.Equals("note activate:on"))
+                    int fileStatus = Note.error; // 3가지 경우의 수가 모두 아닐 경우에 걸러짐.
+                    if (status == null)
                     {
-                        isActivate = true;
-                    }
-                    else if (status.Equals("note activate:off"))
-                    {
-                        isActivate = false;
-                    }
-                    else if (status.Equals("note activate:trash"))
-                    {
+                        // 이외의 파일들은 읽지 않는다.
                         sr.Close();
                         continue;
-                        // 구현하려면 클래스들 속성 조정해야함.
+                    } else if (status.Equals("note status:on"))
+                    {
+                        fileStatus = Note.on;
                     }
-                    note = new Note(files[i], sb_data, isActivate);
+                    else if (status.Equals("note status:off"))
+                    {
+                        fileStatus = Note.off;
+                    }
+                    else if (status.Equals("note status:trash"))
+                    {
+                        fileStatus = Note.trash;
+                    } else
+                    {   
+                        // 이외의 파일들은 읽지 않는다.
+                        sr.Close();
+                        continue;
+                    }
+                    note = new Note(files[i], sb_data, fileStatus);
                     memos.Add(note);
                     sr.Close();
                 }

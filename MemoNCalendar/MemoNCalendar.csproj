@@ -81,6 +81,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\TrashCan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrashCan.Designer.cs">
+      <DependentUpon>TrashCan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrashCan.resx">
+      <DependentUpon>TrashCan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\List.resx">
       <DependentUpon>List.cs</DependentUpon>
@@ -141,6 +150,10 @@
     <None Include="Image\buttons\newNote2.png" />
     <None Include="Image\buttons\newNote1.png" />
     <None Include="Image\m&amp;c.png" />
+    <None Include="Image\buttons\ahdelronBlog1.png" />
+    <None Include="Image\buttons\ahdelronBlog2.png" />
+    <None Include="Image\buttons\trashCan1.png" />
+    <None Include="Image\buttons\trashCan2.png" />
     <Content Include="Image\memo.png" />
     <None Include="Image\pressed button.png" />
     <None Include="Image\unpressed button.png" />

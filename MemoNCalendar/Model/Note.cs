@@ -1,23 +1,31 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 
 namespace MemoNCalendar.Model
 {
     public class Note
     {
-        private DateTime dateTime; // 메모 생성 날짜
+        private DateTime dateTime; // 미구현
         private string fileName;
-        //private string title; // 제목 구현 X // memo에서 앞 몇글자만 "bulabulabulabula ..." 식으로 표현
 
-        private bool isActivate; // note activate : on / off // note status : trash
+        private int fileStatus;
+
+        public static int off = 0x00;
+        public static int on = 0x01;
+        public static int trash = 0x02;
+        public static int error = 0x10;
+
+        //private bool isActivate; // note activate : on / off // note status : trash
+
         private StringBuilder memo;
 
-        public Note(string fileName, StringBuilder memo, bool isActivate)
+        public Note(string fileName, StringBuilder memo, int fileStatus)
         {
             this.fileName = fileName;
             this.memo = memo;
-            this.isActivate = isActivate;
-            setDateTime();
+            this.fileStatus = fileStatus;
+            //setDateTime();
         }
 
         public void setDateTime()
@@ -40,9 +48,9 @@ namespace MemoNCalendar.Model
             return memo;
         }
 
-        public bool getIsActivate()
+        public int getFileStatus()
         {
-            return isActivate;
+            return fileStatus;
         }
 
         public void setFileName(string fileName)
@@ -60,9 +68,31 @@ namespace MemoNCalendar.Model
             this.memo = memo;
         }
 
-        public void setIsActivate(bool isActivate)
+        public void setFileStatus(int fileStatus)
         {
-            this.isActivate = isActivate;
+            // FileOut 부분
+            this.fileStatus = fileStatus;
+            if(fileStatus == on)
+            {
+                StreamWriter sw = new StreamWriter(@"data\" + this.getFileName());
+                sw.Write(Controller.StringConverter.ToFile(this.getMemo().ToString(), Note.on));
+                sw.Close();
+            } else if(fileStatus == off)
+            {
+                StreamWriter sw = new StreamWriter(@"data\" + this.getFileName());
+                sw.Write(Controller.StringConverter.ToFile(this.getMemo().ToString(), Note.off));
+                sw.Close();
+            } else if(fileStatus == trash)
+            {
+                StreamWriter sw = new StreamWriter(@"data\" + this.getFileName());
+                sw.Write(Controller.StringConverter.ToFile(this.getMemo().ToString(), Note.trash));
+                sw.Close();
+            } else
+            {
+                StreamWriter sw = new StreamWriter(@"data\" + this.getFileName());
+                sw.Write(Controller.StringConverter.ToFile(this.getMemo().ToString(), Note.error));
+                sw.Close();
+            }
         }
     }
 }

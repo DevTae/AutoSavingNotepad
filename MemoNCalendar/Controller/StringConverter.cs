@@ -1,23 +1,24 @@
-﻿namespace MemoNCalendar.Controller
+﻿using MemoNCalendar.Model;
+
+namespace MemoNCalendar.Controller
 {
     class StringConverter
     {
-        public static int option_on = 0x01;
-        public static int option_off = 0x00;
-        public static int option_trash = 0x02;
-
-        public static string ToFile(string s, int option)
+        public static string ToFile(string s, int fileStatus)
         {
             string head = null;
-            if(option == option_on)
+            if(fileStatus == Note.on)
             {
-                head = "note activate:on\n";
-            } else if(option == option_off)
+                head = "note status:on\n";
+            } else if(fileStatus == Note.off)
             {
-                head = "note activate:off\n";
-            } else if(option == option_trash)
+                head = "note status:off\n";
+            } else if(fileStatus == Note.trash)
             {
-                head = "note activate:trash\n";
+                head = "note status:trash\n";
+            } else
+            {
+                head = "note status:error\n";
             }
             head += s;
             return head;

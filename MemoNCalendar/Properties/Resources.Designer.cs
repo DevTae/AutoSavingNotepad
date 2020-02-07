@@ -63,6 +63,26 @@ namespace MemoNCalendar.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap ahdelronBlog1 {
+            get {
+                object obj = ResourceManager.GetObject("ahdelronBlog1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap ahdelronBlog2 {
+            get {
+                object obj = ResourceManager.GetObject("ahdelronBlog2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap listView1 {
             get {
                 object obj = ResourceManager.GetObject("listView1", resourceCulture);
@@ -226,6 +246,26 @@ namespace MemoNCalendar.Properties {
         internal static System.Drawing.Bitmap saveNote2 {
             get {
                 object obj = ResourceManager.GetObject("saveNote2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap trashCan1 {
+            get {
+                object obj = ResourceManager.GetObject("trashCan1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap trashCan2 {
+            get {
+                object obj = ResourceManager.GetObject("trashCan2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

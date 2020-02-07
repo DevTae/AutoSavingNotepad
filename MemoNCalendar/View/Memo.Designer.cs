@@ -34,6 +34,11 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.pinStatusLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.opacityStatusLabel = new System.Windows.Forms.Label();
+            this.trashCan2 = new System.Windows.Forms.PictureBox();
+            this.trashCan1 = new System.Windows.Forms.PictureBox();
+            this.ahdelronBlog2 = new System.Windows.Forms.PictureBox();
+            this.ahdelronBlog1 = new System.Windows.Forms.PictureBox();
             this.newNote2 = new System.Windows.Forms.PictureBox();
             this.newNote1 = new System.Windows.Forms.PictureBox();
             this.opacitySet2 = new System.Windows.Forms.PictureBox();
@@ -49,7 +54,10 @@
             this.saveNote1 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.opacityStatusLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trashCan2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trashCan1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ahdelronBlog2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ahdelronBlog1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newNote2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newNote1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opacitySet2)).BeginInit();
@@ -124,6 +132,69 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // opacityStatusLabel
+            // 
+            this.opacityStatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.opacityStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.opacityStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.opacityStatusLabel.Location = new System.Drawing.Point(12, 364);
+            this.opacityStatusLabel.Name = "opacityStatusLabel";
+            this.opacityStatusLabel.Size = new System.Drawing.Size(145, 21);
+            this.opacityStatusLabel.TabIndex = 44;
+            this.opacityStatusLabel.Text = "현재 투명도 : 100%";
+            this.opacityStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opacityStatusLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.opacityStatusLabel_MouseMove);
+            // 
+            // trashCan2
+            // 
+            this.trashCan2.Image = global::MemoNCalendar.Properties.Resources.trashCan2;
+            this.trashCan2.Location = new System.Drawing.Point(562, 402);
+            this.trashCan2.Name = "trashCan2";
+            this.trashCan2.Size = new System.Drawing.Size(114, 34);
+            this.trashCan2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.trashCan2.TabIndex = 48;
+            this.trashCan2.TabStop = false;
+            this.trashCan2.Visible = false;
+            this.trashCan2.Click += new System.EventHandler(this.trashCan2_Click);
+            this.trashCan2.MouseLeave += new System.EventHandler(this.trashCan2_MouseLeave);
+            // 
+            // trashCan1
+            // 
+            this.trashCan1.Image = global::MemoNCalendar.Properties.Resources.trashCan1;
+            this.trashCan1.Location = new System.Drawing.Point(562, 362);
+            this.trashCan1.Name = "trashCan1";
+            this.trashCan1.Size = new System.Drawing.Size(114, 34);
+            this.trashCan1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.trashCan1.TabIndex = 47;
+            this.trashCan1.TabStop = false;
+            this.trashCan1.Visible = false;
+            this.trashCan1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.trashCan1_MouseMove);
+            // 
+            // ahdelronBlog2
+            // 
+            this.ahdelronBlog2.Image = global::MemoNCalendar.Properties.Resources.ahdelronBlog2;
+            this.ahdelronBlog2.Location = new System.Drawing.Point(562, 686);
+            this.ahdelronBlog2.Name = "ahdelronBlog2";
+            this.ahdelronBlog2.Size = new System.Drawing.Size(114, 34);
+            this.ahdelronBlog2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ahdelronBlog2.TabIndex = 46;
+            this.ahdelronBlog2.TabStop = false;
+            this.ahdelronBlog2.Visible = false;
+            this.ahdelronBlog2.Click += new System.EventHandler(this.ahdelronBlog2_Click);
+            this.ahdelronBlog2.MouseLeave += new System.EventHandler(this.ahdelronBlog2_MouseLeave);
+            // 
+            // ahdelronBlog1
+            // 
+            this.ahdelronBlog1.Image = global::MemoNCalendar.Properties.Resources.ahdelronBlog1;
+            this.ahdelronBlog1.Location = new System.Drawing.Point(562, 647);
+            this.ahdelronBlog1.Name = "ahdelronBlog1";
+            this.ahdelronBlog1.Size = new System.Drawing.Size(114, 34);
+            this.ahdelronBlog1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ahdelronBlog1.TabIndex = 45;
+            this.ahdelronBlog1.TabStop = false;
+            this.ahdelronBlog1.Visible = false;
+            this.ahdelronBlog1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ahdelronBlog1_MouseMove);
+            // 
             // newNote2
             // 
             this.newNote2.Image = global::MemoNCalendar.Properties.Resources.newNote2;
@@ -152,7 +223,7 @@
             // opacitySet2
             // 
             this.opacitySet2.Image = global::MemoNCalendar.Properties.Resources.opacitySet2;
-            this.opacitySet2.Location = new System.Drawing.Point(562, 512);
+            this.opacitySet2.Location = new System.Drawing.Point(562, 598);
             this.opacitySet2.Name = "opacitySet2";
             this.opacitySet2.Size = new System.Drawing.Size(114, 34);
             this.opacitySet2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +236,7 @@
             // programExit2
             // 
             this.programExit2.Image = global::MemoNCalendar.Properties.Resources.programExit2;
-            this.programExit2.Location = new System.Drawing.Point(562, 613);
+            this.programExit2.Location = new System.Drawing.Point(562, 774);
             this.programExit2.Name = "programExit2";
             this.programExit2.Size = new System.Drawing.Size(114, 34);
             this.programExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +249,7 @@
             // removeNote2
             // 
             this.removeNote2.Image = global::MemoNCalendar.Properties.Resources.removeNote2;
-            this.removeNote2.Location = new System.Drawing.Point(562, 411);
+            this.removeNote2.Location = new System.Drawing.Point(562, 228);
             this.removeNote2.Name = "removeNote2";
             this.removeNote2.Size = new System.Drawing.Size(114, 34);
             this.removeNote2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,7 +262,7 @@
             // pinForm2
             // 
             this.pinForm2.Image = global::MemoNCalendar.Properties.Resources.pinForm2;
-            this.pinForm2.Location = new System.Drawing.Point(562, 319);
+            this.pinForm2.Location = new System.Drawing.Point(562, 491);
             this.pinForm2.Name = "pinForm2";
             this.pinForm2.Size = new System.Drawing.Size(114, 34);
             this.pinForm2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,7 +275,7 @@
             // saveNote2
             // 
             this.saveNote2.Image = global::MemoNCalendar.Properties.Resources.saveNote2;
-            this.saveNote2.Location = new System.Drawing.Point(562, 214);
+            this.saveNote2.Location = new System.Drawing.Point(562, 140);
             this.saveNote2.Name = "saveNote2";
             this.saveNote2.Size = new System.Drawing.Size(114, 34);
             this.saveNote2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +288,7 @@
             // listView2
             // 
             this.listView2.Image = global::MemoNCalendar.Properties.Resources.listView2;
-            this.listView2.Location = new System.Drawing.Point(562, 128);
+            this.listView2.Location = new System.Drawing.Point(562, 314);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(114, 34);
             this.listView2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,7 +301,7 @@
             // opacitySet1
             // 
             this.opacitySet1.Image = global::MemoNCalendar.Properties.Resources.opacitySet1;
-            this.opacitySet1.Location = new System.Drawing.Point(562, 472);
+            this.opacitySet1.Location = new System.Drawing.Point(562, 558);
             this.opacitySet1.Name = "opacitySet1";
             this.opacitySet1.Size = new System.Drawing.Size(114, 34);
             this.opacitySet1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -242,7 +313,7 @@
             // programExit1
             // 
             this.programExit1.Image = global::MemoNCalendar.Properties.Resources.programExit1;
-            this.programExit1.Location = new System.Drawing.Point(562, 574);
+            this.programExit1.Location = new System.Drawing.Point(562, 735);
             this.programExit1.Name = "programExit1";
             this.programExit1.Size = new System.Drawing.Size(114, 34);
             this.programExit1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -254,7 +325,7 @@
             // removeNote1
             // 
             this.removeNote1.Image = global::MemoNCalendar.Properties.Resources.removeNote1;
-            this.removeNote1.Location = new System.Drawing.Point(562, 372);
+            this.removeNote1.Location = new System.Drawing.Point(562, 189);
             this.removeNote1.Name = "removeNote1";
             this.removeNote1.Size = new System.Drawing.Size(114, 34);
             this.removeNote1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,7 +337,7 @@
             // pinForm1
             // 
             this.pinForm1.Image = global::MemoNCalendar.Properties.Resources.pinForm1;
-            this.pinForm1.Location = new System.Drawing.Point(562, 280);
+            this.pinForm1.Location = new System.Drawing.Point(562, 452);
             this.pinForm1.Name = "pinForm1";
             this.pinForm1.Size = new System.Drawing.Size(114, 34);
             this.pinForm1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +349,7 @@
             // saveNote1
             // 
             this.saveNote1.Image = global::MemoNCalendar.Properties.Resources.saveNote1;
-            this.saveNote1.Location = new System.Drawing.Point(562, 175);
+            this.saveNote1.Location = new System.Drawing.Point(562, 101);
             this.saveNote1.Name = "saveNote1";
             this.saveNote1.Size = new System.Drawing.Size(114, 34);
             this.saveNote1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,7 +361,7 @@
             // listView1
             // 
             this.listView1.Image = global::MemoNCalendar.Properties.Resources.listView1;
-            this.listView1.Location = new System.Drawing.Point(562, 89);
+            this.listView1.Location = new System.Drawing.Point(562, 275);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(114, 34);
             this.listView1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -310,25 +381,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
-            // opacityStatusLabel
-            // 
-            this.opacityStatusLabel.BackColor = System.Drawing.Color.Transparent;
-            this.opacityStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.opacityStatusLabel.ForeColor = System.Drawing.Color.White;
-            this.opacityStatusLabel.Location = new System.Drawing.Point(12, 364);
-            this.opacityStatusLabel.Name = "opacityStatusLabel";
-            this.opacityStatusLabel.Size = new System.Drawing.Size(145, 21);
-            this.opacityStatusLabel.TabIndex = 44;
-            this.opacityStatusLabel.Text = "현재 투명도 : 100%";
-            this.opacityStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.opacityStatusLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.opacityStatusLabel_MouseMove);
-            // 
             // Memo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 666);
+            this.ClientSize = new System.Drawing.Size(935, 858);
             this.ControlBox = false;
+            this.Controls.Add(this.trashCan2);
+            this.Controls.Add(this.trashCan1);
+            this.Controls.Add(this.ahdelronBlog2);
+            this.Controls.Add(this.ahdelronBlog1);
             this.Controls.Add(this.opacityStatusLabel);
             this.Controls.Add(this.newNote2);
             this.Controls.Add(this.newNote1);
@@ -359,6 +421,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Memo_FormClosing);
             this.Load += new System.EventHandler(this.Memo_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Memo_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.trashCan2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trashCan1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ahdelronBlog2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ahdelronBlog1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newNote2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newNote1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opacitySet2)).EndInit();
@@ -401,6 +467,10 @@
         private System.Windows.Forms.PictureBox listView2;
         private System.Windows.Forms.PictureBox listView1;
         private System.Windows.Forms.Label opacityStatusLabel;
+        private System.Windows.Forms.PictureBox ahdelronBlog2;
+        private System.Windows.Forms.PictureBox ahdelronBlog1;
+        private System.Windows.Forms.PictureBox trashCan2;
+        private System.Windows.Forms.PictureBox trashCan1;
     }
 }
 

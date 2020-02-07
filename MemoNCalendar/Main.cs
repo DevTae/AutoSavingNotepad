@@ -13,6 +13,7 @@ namespace MemoNCalendar
         public static string version = "1.00";
         public static int windowCount = 0;
         public static bool isListView = false;
+        public static bool isTrashCan = false;
         public static List<Memo> memos;
         public static List<Note> notes;
 
@@ -28,7 +29,7 @@ namespace MemoNCalendar
             memos = new List<Memo>();
             foreach (Note note in notes)
             {
-                if (note.getIsActivate())
+                if (note.getFileStatus() == Note.on)
                 {
                     Memo memo = new Memo(note);
                     memos.Add(memo);

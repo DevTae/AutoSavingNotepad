@@ -62,6 +62,11 @@ namespace MemoNCalendar.View
             listView2.Left = pivotLeft;
             listView2.Top = pivotTop + 34 * i++;
 
+            trashCan1.Left = pivotLeft;
+            trashCan1.Top = pivotTop + 34 * i;
+            trashCan2.Left = pivotLeft;
+            trashCan2.Top = pivotTop + 34 * i++;
+
             pinForm1.Left = pivotLeft;
             pinForm1.Top = pivotTop + 34 * i;
             pinForm2.Left = pivotLeft;
@@ -71,6 +76,11 @@ namespace MemoNCalendar.View
             opacitySet1.Top = pivotTop + 34 * i;
             opacitySet2.Left = pivotLeft;
             opacitySet2.Top = pivotTop + 34 * i++;
+
+            ahdelronBlog1.Left = pivotLeft;
+            ahdelronBlog1.Top = pivotTop + 34 * i;
+            ahdelronBlog2.Left = pivotLeft;
+            ahdelronBlog2.Top = pivotTop + 34 * i++;
 
             programExit1.Left = pivotLeft;
             programExit1.Top = pivotTop + 34 * i;
@@ -125,10 +135,7 @@ namespace MemoNCalendar.View
         // Save_and_Quit() 함수 : 노트 탭 하나만 종료할 때 쓰이는 함수 (리스트로 감.)
         private void Save_and_Quit() 
         {
-            sw = new StreamWriter(@"data\" + note.getFileName());
-            sw.Write(Controller.StringConverter.ToFile(textBox.Text, Controller.StringConverter.option_off));
-            sw.Close();
-            note.setIsActivate(false);
+            note.setFileStatus(Note.off);
             Main.memos.Remove(this);
             Unload_Me();
         }
@@ -150,17 +157,13 @@ namespace MemoNCalendar.View
 
         private void Go_Trashcan()
         {
-            DialogResult result = MessageBox.Show(null, "정말로 이 노트를 삭제하시겠습니까?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                sw = new StreamWriter(@"data\" + note.getFileName());
-                // note 옵션에 trash 옵션 없음.
-                sw.Write(Controller.StringConverter.ToFile(textBox.Text, Controller.StringConverter.option_trash));
-                sw.Close();
-                Main.memos.Remove(this);
-                Main.notes.Remove(this.note);
-                Unload_Me();
-            }
+            //DialogResult result = MessageBox.Show(null, "정말로 이 노트를 삭제하시겠습니까?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (result == DialogResult.Yes)
+            //{
+            this.note.setFileStatus(Note.trash);
+            Main.memos.Remove(this);
+            Unload_Me();
+            //}
         }
 
         private void Terminate()
@@ -178,6 +181,19 @@ namespace MemoNCalendar.View
             else
             {
                 MessageBox.Show(null, "이미 리스트뷰가 켜져 있습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void ShowTrashCanForm()
+        {
+            if (Main.isTrashCan == false)
+            {
+                TrashCan trashCan = new TrashCan();
+                trashCan.Show();
+            }
+            else
+            {
+                MessageBox.Show(null, "이미 휴지통이 켜져 있습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -206,13 +222,13 @@ namespace MemoNCalendar.View
                 opacityStatusLabel.Text = "현재 투명도 : 80%";
             } else if(this.Opacity >= 0.8)
             {
-                this.Opacity = 0.6;
-                opacityStatusLabel.Text = "현재 투명도 : 60%";
-            } else if (this.Opacity >= 0.6)
+                this.Opacity = 0.5;
+                opacityStatusLabel.Text = "현재 투명도 : 50%";
+            } else if (this.Opacity >= 0.5)
             {
-                this.Opacity = 0.4;
-                opacityStatusLabel.Text = "현재 투명도 : 40%";
-            } else if (this.Opacity >= 0.4)
+                this.Opacity = 0.3;
+                opacityStatusLabel.Text = "현재 투명도 : 30%";
+            } else if (this.Opacity >= 0.3)
             {
                 this.Opacity = 1;
                 opacityStatusLabel.Text = "현재 투명도 : 100%";
@@ -228,7 +244,7 @@ namespace MemoNCalendar.View
         {
             note.setMemo(new StringBuilder(textBox.Text));
             sw = new StreamWriter(@"data\" + note.getFileName());
-            sw.Write(Controller.StringConverter.ToFile(textBox.Text, Controller.StringConverter.option_on));
+            sw.Write(Controller.StringConverter.ToFile(textBox.Text, Note.on));
             sw.Close();
         }
 
@@ -240,6 +256,8 @@ namespace MemoNCalendar.View
             pinForm1.Visible = true;
             removeNote1.Visible = true;
             opacitySet1.Visible = true;
+            ahdelronBlog1.Visible = true;
+            trashCan1.Visible = true;
             programExit1.Visible = true;
         }
 
@@ -251,6 +269,8 @@ namespace MemoNCalendar.View
             pinForm1.Visible = false;
             removeNote1.Visible = false;
             opacitySet1.Visible = false;
+            ahdelronBlog1.Visible = false;
+            trashCan1.Visible = false;
             programExit1.Visible = false;
 
             newNote2.Visible = false;
@@ -259,7 +279,10 @@ namespace MemoNCalendar.View
             pinForm2.Visible = false;
             removeNote2.Visible = false;
             opacitySet2.Visible = false;
+            ahdelronBlog2.Visible = false;
+            trashCan2.Visible = false;
             programExit2.Visible = false;
+
         }
 
         private void Memo_MouseMove(object sender, MouseEventArgs e)
@@ -297,9 +320,19 @@ namespace MemoNCalendar.View
             Opacity_Set_Customed();
         }
 
+        private void ahdelronBlog2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", "https://ahdelron.tistory.com/");
+        }
+
         private void programExit2_Click(object sender, EventArgs e)
         {
             Terminate();
+        }
+
+        private void trashCan2_Click(object sender, EventArgs e)
+        {
+            ShowTrashCanForm();
         }
 
         private void newNote1_MouseMove(object sender, MouseEventArgs e)
@@ -338,10 +371,22 @@ namespace MemoNCalendar.View
             opacitySet2.Visible = true;
         }
 
+        private void ahdelronBlog1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ahdelronBlog1.Visible = false;
+            ahdelronBlog2.Visible = true;
+        }
+
         private void programExit1_MouseMove(object sender, MouseEventArgs e)
         {
             programExit1.Visible = false;
             programExit2.Visible = true;
+        }
+
+        private void trashCan1_MouseMove(object sender, MouseEventArgs e)
+        {
+            trashCan1.Visible = false;
+            trashCan2.Visible = true;
         }
 
         private void newNote2_MouseLeave(object sender, EventArgs e)
@@ -380,10 +425,22 @@ namespace MemoNCalendar.View
             opacitySet2.Visible = false;
         }
 
+        private void ahdelronBlog2_MouseLeave(object sender, EventArgs e)
+        {
+            ahdelronBlog1.Visible = true;
+            ahdelronBlog2.Visible = false;
+        }
+
         private void programExit2_MouseLeave(object sender, EventArgs e)
         {
             programExit1.Visible = true;
             programExit2.Visible = false;
+        }
+
+        private void trashCan2_MouseLeave(object sender, EventArgs e)
+        {
+            trashCan1.Visible = true;
+            trashCan2.Visible = false;
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
