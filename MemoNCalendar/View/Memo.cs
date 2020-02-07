@@ -7,10 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 
 /**
- * 수정 및 재배포 가능합니다. 주석 지우지 말아주세요.
- * @author ahdelron
+ * 
+ * Copyright (c) 2020, ahdelron All rights reserved.
+ * https://ahdelron.tistory.com/
+ * 
  */
-
 
 namespace MemoNCalendar.View
 {

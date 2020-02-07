@@ -6,6 +6,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
+/**
+ * 
+ * Copyright (c) 2020, ahdelron All rights reserved.
+ * https://ahdelron.tistory.com/
+ * 
+ */
+
 namespace MemoNCalendar
 {
     public partial class Main : Form

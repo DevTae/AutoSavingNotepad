@@ -3,6 +3,13 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+/**
+ * 
+ * Copyright (c) 2020, ahdelron All rights reserved.
+ * https://ahdelron.tistory.com/
+ * 
+ */
+
 namespace MemoNCalendar.View
 {
     public partial class List : Form

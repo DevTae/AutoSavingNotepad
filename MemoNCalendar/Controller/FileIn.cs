@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+/**
+ * 
+ * Copyright (c) 2020, ahdelron All rights reserved.
+ * https://ahdelron.tistory.com/
+ * 
+ */
+
 namespace MemoNCalendar.Controller
 {
     class FileIn

@@ -6,6 +6,13 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
+/**
+ * 
+ * Copyright (c) 2020, ahdelron All rights reserved.
+ * https://ahdelron.tistory.com/
+ * 
+ */
+
 namespace MemoNCalendar.View
 {
     public partial class TrashCan : Form
