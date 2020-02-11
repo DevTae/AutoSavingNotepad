@@ -17,7 +17,7 @@ namespace MemoNCalendar
 {
     public partial class Main : Form
     {
-        public static string version = "1.00";
+        public static string version = "1.01";
         public static int windowCount = 0;
         public static bool isListView = false;
         public static bool isTrashCan = false;

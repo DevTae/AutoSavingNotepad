@@ -35,7 +35,7 @@
             this.label = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox
@@ -51,13 +51,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(368, 92);
+            this.button1.Location = new System.Drawing.Point(368, 91);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 74);
+            this.button1.Size = new System.Drawing.Size(63, 74);
             this.button1.TabIndex = 1;
-            this.button1.Text = "선택한 노트 복구";
+            this.button1.Text = "열기";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // previewText
             // 
@@ -89,10 +90,11 @@
             this.button2.Text = "선택한 노트 삭제";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(229, 171);
+            this.button3.Location = new System.Drawing.Point(368, 171);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 25);
             this.button3.TabIndex = 5;
@@ -100,21 +102,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button5
             // 
-            this.button4.Location = new System.Drawing.Point(368, 171);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 27);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "리스트 갱신";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button5.Location = new System.Drawing.Point(438, 92);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(63, 74);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "복구";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseHover += new System.EventHandler(this.button5_MouseHover);
             // 
             // TrashCan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(513, 427);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label);
@@ -127,7 +130,8 @@
             this.MinimizeBox = false;
             this.Name = "TrashCan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "TrashCan";
+            this.Text = "휴지통";
+            this.Activated += new System.EventHandler(this.TrashCan_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrashCan_FormClosing);
             this.Load += new System.EventHandler(this.TrashCan_Load);
             this.ResumeLayout(false);
@@ -143,6 +147,6 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -34,7 +34,7 @@ namespace MemoNCalendar.View
             }
         }
 
-        private void Restore_Memo()
+        private void Activate_Memo()
         {
             foreach(Note note in Main.notes)
             {
@@ -47,8 +47,22 @@ namespace MemoNCalendar.View
                     //listBox.Items.Remove(listBox.SelectedItem);
                     //previewText.Text = "<미리보기>";
                     //previewText.ForeColor = Color.Gray;
-                    Main.isTrashCan = false;
-                    this.Close();
+                    //Main.isTrashCan = false;
+                    //this.Close();
+                    Refresh_Listbox();
+                    break;
+                }
+            }
+        }
+
+        private void Restore_Memo()
+        {
+            foreach (Note note in Main.notes)
+            {
+                if (listBox.Text == note.getFileName())
+                {
+                    note.setFileStatus(Note.off);
+                    Refresh_Listbox();
                     break;
                 }
             }
@@ -68,8 +82,9 @@ namespace MemoNCalendar.View
                         MessageBox.Show(new Form() { TopMost = true }, "삭제 과정에서 오류가 발생했습니다.", "예외 처리", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     listBox.Items.Remove(listBox.SelectedItem);
-                    Main.isTrashCan = false;
-                    this.Close();
+                    //Main.isTrashCan = false;
+                    //this.Close();
+                    Refresh_Listbox();
                     break;
                 }
             }
@@ -108,6 +123,8 @@ namespace MemoNCalendar.View
         private void Refresh_Listbox()
         {
             listBox.Items.Clear();
+            previewText.Text = "<미리보기>";
+            previewText.ForeColor = Color.Gray;
             foreach (Note note in Main.notes)
             {
                 if (note.getFileStatus() == Note.trash)
@@ -116,6 +133,8 @@ namespace MemoNCalendar.View
                 }
             }
         }
+
+        
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -132,7 +151,7 @@ namespace MemoNCalendar.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Restore_Memo();
+            Activate_Memo();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -150,7 +169,29 @@ namespace MemoNCalendar.View
             Empty_TrashCan();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Restore_Memo();
+        }
+
+        ToolTip toolTip = new ToolTip();
+
+        private void button1_MouseHover(object sender, EventArgs e) // 열기
+        {
+            toolTip.Show("열기 버튼을 누르면 선택한 메모장이 활성화됩니다.", button1);
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e) // 복구
+        {
+            toolTip.Show("복구 버튼을 누르면 선택한 메모장이 리스트뷰로 옮겨집니다.", button5);
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("이 버튼을 누르면 선택한 메모장이 영구삭제됩니다.", button5);
+        }
+
+        private void TrashCan_Activated(object sender, EventArgs e)
         {
             Refresh_Listbox();
         }
