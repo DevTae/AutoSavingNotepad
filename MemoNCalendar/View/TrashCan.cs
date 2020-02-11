@@ -188,7 +188,7 @@ namespace MemoNCalendar.View
 
         private void button2_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("이 버튼을 누르면 선택한 메모장이 영구삭제됩니다.", button5);
+            toolTip.Show("이 버튼을 누르면 선택한 메모장이 영구삭제됩니다.", button2);
         }
 
         private void TrashCan_Activated(object sender, EventArgs e)
